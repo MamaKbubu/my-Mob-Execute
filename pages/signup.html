@@ -25,72 +25,39 @@
                     <li><a href="developers.html">Developers</a></li>
                 </ul>
             </div>
-            <h1>Register here</h1>
-            <form action="">
-                <fieldset>
-                    <legend>Fill in your details</legend>
-                    <p>Name & Surname: <input type="text"></p>
-                    <p>Email: <input type="text"></p>
-                    <p>Password: <input type="password"></p>
-                    <p>Confirm Password: <input type="password">
-                    <p>Mob Agents == Business Owners &&<br> Mob Spectators == Business Supporters</p>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="Name Surname">Name Surname</label>
+                <input id="Name Surname" name="Name Surname" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <p>Mob Agents == Business Owners &&<br> Mob Spectators == Business Supporters</p>
                     <p><label for="agree">Mob Agent</label><input type="checkbox" id="agree"></p>
                     <p><label for="disagree">Mob Spectator</label><input type="checkbox" id="disagree"></p>
-                    <input type="submit" value="Register" id="Register">
-                </fieldset> 
+                    <button type="button" id="Register">Register</button>
+            </div>
 
-                <script src="/javafiles/signup.js"></script>
-            <style>
-                h1 {
-    text-align: center;
-    margin-top: 0px;
-    color: #0f2027;
-}
-
-form .fieldset {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background-color: whitesmoke;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    align-items:  center;
-}
-
-legend {
-    font-weight: 700;
-    color: #0f2027;
-    align-items: center;
-}
-
-p {
-    margin: 10px 0;
-    align-self: center;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    color: white;
-    background-color: rgb(41, 57, 194);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-            </style>
-        
-            </form>
-
-            <style>
-                
-            </style>
+                <div class="error"></div>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

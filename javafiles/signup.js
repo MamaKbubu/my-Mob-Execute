@@ -1,16 +1,25 @@
 let agree = document.getElementById("agree");
-agree.addEventListener('change', function(){
-    let Register = document.getElementById("Register");
+let disagree = document.getElementById("disagree");
+let Register = document.getElementById("Register");
+
+agree.addEventListener('change', function() {
     if (agree.checked) {
         Register.removeAttribute("disabled");
-        window.location.href = "business.html";
+        disagree.checked = false; // Uncheck the other checkbox
     }
-})
-let disagree = document.getElementById("disagree");
-disagree.addEventListener('change', function(){
-    let Register = document.getElementById("Register");
+});
+
+disagree.addEventListener('change', function() {
     if (disagree.checked) {
         Register.removeAttribute("disabled");
+        agree.checked = false; // Uncheck the other checkbox
+    }
+});
+
+Register.addEventListener('click', function() {
+    if (agree.checked) {
+        window.location.href = "business.html";
+    } else if (disagree.checked) {
         window.location.href = "homepage.html";
     }
-})
+});
