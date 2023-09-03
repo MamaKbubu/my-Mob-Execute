@@ -17,12 +17,38 @@
 
 .profile img {
     max-width: 20%;
-    border-radius: 100%;
+    border-radius: 0%;
 }
 
 .profile h2 {
     margin-top: 10px;
     color: whitesmoke; 
+}
+
+.profile p {
+    margin-top: 10px;
+}
+
+.github-link {
+    margin-top: 10px;
+}
+
+.github-link i {
+    background-image: url('/images/github.png');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.github-link a {
+    text-decoration: none;
+}
+
+.github-link a img {
+    max-width: 20%;
+    border-radius: 5px;
 }
 
 .profile p {
