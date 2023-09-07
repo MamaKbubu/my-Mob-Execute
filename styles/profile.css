@@ -13,6 +13,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 45%;
+    background-color: antiquewhite;
 }
 
 .profile img {
@@ -22,7 +23,7 @@
 
 .profile h2 {
     margin-top: 10px;
-    color: whitesmoke; 
+    color:black; 
 }
 
 .profile p {
@@ -34,9 +35,8 @@
 }
 
 .github-link i {
-    background-image: url('/images/github.png');
-    width: 24px;
-    height: 24px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
@@ -46,9 +46,10 @@
     text-decoration: none;
 }
 
-.github-link a img {
-    max-width: 20%;
-    border-radius: 5px;
+.github-link a {
+    width: 100px;
+    position: relative;
+    height: 100px;
 }
 
 .profile p {
