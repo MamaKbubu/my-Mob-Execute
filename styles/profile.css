@@ -19,6 +19,7 @@
 .profile img {
     max-width: 20%;
     border-radius: 0%;
+    border : 2.75px solid black;
 }
 
 .profile h2 {
