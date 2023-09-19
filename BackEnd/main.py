@@ -1,11 +1,14 @@
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import OAuth2PasswordBearer
 import models, schemas
 from database import engine, SessionLocal
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Annotated
 
 app = FastAPI()
+
+oauth2 =   OAuth2PasswordBearer(tokenUrl="token")
 
 origins = ['https://www.google.com']
 
@@ -31,7 +34,7 @@ def index():
     return {'data': 'Welcome to The Mob API'}
 
 @app.post('/mob_agents/', response_model=schemas.Show_Mob_Agent, tags=['Mob_Agents'])
-def create_mob_agent(request: schemas.Mob_Agent, db: Session = Depends(get_db)):
+def create_mob_agent(token: Annotated[str, Depends(oauth2)],request: schemas.Mob_Agent, db: Session = Depends(get_db)):
     new_mob_agent = models.Mob_Agent(name_sur=request.name_sur, email=request.email, password=request.password)
     db.add(new_mob_agent)
     db.commit()
