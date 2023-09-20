@@ -497,7 +497,18 @@ img {
   font-size: var(--normal-font-size);
   font-family: var(--body-font);
 }
+.footer__container{
+  padding: 2rem 1.5rem;
+  background-color: var(--black-color);
 
+}
+.footer__container .button{
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: 1rem 1.25rem;
+  border-radius: .2rem;
+  transition: .3s;
+}
 .footer__social {
   display: flex;
   column-gap: 1.25rem;
