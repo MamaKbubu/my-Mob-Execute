@@ -23,11 +23,12 @@
 
 .profile h2 {
     margin-top: 10px;
-    color:black; 
+    color: white; 
 }
 
 .profile p {
     margin-top: 10px;
+    color: #ccc;
 }
 
 .github-link {
